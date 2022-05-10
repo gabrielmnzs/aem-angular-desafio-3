@@ -6,7 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import "./components/import-components";
 import { ModelManagerService } from "./components/model-manager.service";
-import { PageComponent } from "./components/page/page.component";
+import { PageComponent } from "./components/experience-fragments/page/page.component";
 
 import { AemAngularCoreWcmComponentsTabsV1 } from "@adobe/aem-core-components-angular-spa/containers/tabs/v1";
 

@@ -10,7 +10,7 @@ import {
   UrlMatchResult,
   UrlSegment,
 } from "@angular/router";
-import { PageComponent } from "./components/page/page.component";
+import { PageComponent } from "./components/experience-fragments/page/page.component";
 
 export function AemPageMatcher(url: UrlSegment[]): UrlMatchResult {
   if (url.length) {

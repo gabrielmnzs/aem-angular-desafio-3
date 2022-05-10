@@ -1,7 +1,7 @@
 import { Constants } from "@adobe/aem-angular-editable-components";
 import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { ModelManagerService } from "../model-manager.service";
+import { ModelManagerService } from "../../model-manager.service";
 
 @Component({
   selector: "app-main",
@@ -15,7 +15,7 @@ export class PageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private modelManagerService: ModelManagerService,
+    private modelManagerService: ModelManagerService
   ) {
     this.modelManagerService
       .getData({ path: this.route.snapshot.data.path })
