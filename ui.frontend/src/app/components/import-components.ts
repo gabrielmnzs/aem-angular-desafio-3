@@ -16,7 +16,7 @@
 import { LazyMapTo, MapTo } from "@adobe/aem-angular-editable-components";
 
 import "./containers/container/container.component";
-import "./containers/container/responsive-grid/responsive-grid.component";
+import "./containers/responsive-grid/responsive-grid.component";
 
 import {
   TitleV2Component,
