@@ -15,15 +15,15 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // @ts-nocheck
 
-import { SpaAngularEditableComponentsModule } from '@adobe/aem-angular-editable-components';
-import {Model, ModelManager} from '@adobe/aem-spa-page-model-manager';
-import { APP_BASE_HREF } from '@angular/common';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppRoutingModule } from '../../app-routing.module';
-import { ModelManagerService } from '../model-manager.service';
-import { PageComponent } from './page.component';
+import { SpaAngularEditableComponentsModule } from "@adobe/aem-angular-editable-components";
+import { Model, ModelManager } from "@adobe/aem-spa-page-model-manager";
+import { APP_BASE_HREF } from "@angular/common";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { AppRoutingModule } from "../../../app-routing.module";
+import { ModelManagerService } from "../../model-manager.service";
+import { PageComponent } from "./page.component";
 
-describe('PageComponentComponent', () => {
+describe("PageComponentComponent", () => {
   let component: PageComponent;
   let fixture: ComponentFixture<PageComponent>;
 
@@ -32,9 +32,9 @@ describe('PageComponentComponent', () => {
       imports: [SpaAngularEditableComponentsModule, AppRoutingModule],
       providers: [
         ModelManagerService,
-        { provide: APP_BASE_HREF, useValue: '/' }
+        { provide: APP_BASE_HREF, useValue: "/" },
       ],
-      declarations: [PageComponent]
+      declarations: [PageComponent],
     }).compileComponents();
   }));
 
@@ -43,14 +43,14 @@ describe('PageComponentComponent', () => {
     const promise: Promise<Model> = new Promise<Model>((resolve, reject) => {
       resolve({});
     });
-    spyOn(ModelManager, 'getData').and.returnValue(promise);
+    spyOn(ModelManager, "getData").and.returnValue(promise);
 
     fixture = TestBed.createComponent(PageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
